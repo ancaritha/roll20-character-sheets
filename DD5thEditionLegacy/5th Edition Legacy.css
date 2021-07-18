@@ -38,7 +38,7 @@ input[type=radio].sheet-tab-button + span {
 .sheet-advantagetoggle {
   position: absolute;
   top: 92px;
-  left: 570px;
+  left: 490px;
   z-index: 1; }
 
 .sheet-advantagetoggle input[type=radio] {
@@ -84,7 +84,7 @@ input[type=radio].sheet-tab-button:checked + span {
   width: 110px; }
 
 .sheet-whispertoggle {
-  left: 270px; }
+  left: 200px; }
 
 .sheet-advantagetoggle.sheet-whispertoggle input.sheet-toggle-right,
 .sheet-advantagetoggle.sheet-whispertoggle input.sheet-toggle-right + span {
@@ -210,6 +210,17 @@ input[type=radio].sheet-tab-button.sheet-artifact + span {
 
 .sheet-header .sheet-part input[type=text] {
   font-size: 30px; }
+  
+.sheet-header .sheet-part input[type=textsmall],
+.sheet-header .sheet-part select {
+  border: 1px solid #666;
+  border-radius: 5px;
+  height: 56px;
+  width: 110px;
+  text-align: center; }
+  
+  .sheet-header .sheet-part input[type=textsmall] {
+  font-size: 25px; }
 
 .sheet-header .sheet-part span.sheet-display {
   border: 1px solid #666;
@@ -552,6 +563,7 @@ button[type=roll] * {
 .sheet-proficiencies span,
 .sheet-traits span,
 .sheet-spells span,
+.sheet-artifact span,
 .sheet-options .sheet-body span {
   display: block;
   font-size: 9px;
@@ -4601,7 +4613,7 @@ input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer {
     width: 140px !important; }
   div.sheet-licensecontainer.sheet-licensedsheet .sheet-container:not(.sheet-npc) div.sheet-header-info div.sheet-hlabel-container input[name=attr_artifact_name],
   input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer .sheet-container:not(.sheet-npc) div.sheet-header-info div.sheet-hlabel-container input[name=attr_artifact_name] {
-    width: 200px !important; }
+    width: 160px }
   div.sheet-licensecontainer.sheet-licensedsheet .sheet-container:not(.sheet-npc) div.sheet-spells div.sheet-header-info div.sheet-part,
   input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer .sheet-container:not(.sheet-npc) div.sheet-spells div.sheet-header-info div.sheet-part {
     width: 144px; }
@@ -4613,8 +4625,22 @@ input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer {
   div.sheet-licensecontainer.sheet-licensedsheet .sheet-container:not(.sheet-npc) div.sheet-spells div.sheet-header-info div.sheet-part select[name=attr_spellcasting_ability],
   input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer .sheet-container:not(.sheet-npc) div.sheet-spells div.sheet-header-info div.sheet-part select[name=attr_spellcasting_ability] {
     text-align-last: center; }
+	
+  div.sheet-licensecontainer.sheet-licensedsheet .sheet-container:not(.sheet-npc) div.sheet-artifact div.sheet-header-info div.sheet-part,
+  input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer .sheet-container:not(.sheet-npc) div.sheet-artifact div.sheet-header-info div.sheet-part {
+    width: 144px; }
+  div.sheet-licensecontainer.sheet-licensedsheet .sheet-container:not(.sheet-npc) div.sheet-artifact div.sheet-header-info div.sheet-part select,
+  div.sheet-licensecontainer.sheet-licensedsheet .sheet-container:not(.sheet-npc) div.sheet-artifact div.sheet-header-info div.sheet-part input,
+  input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer .sheet-container:not(.sheet-npc) div.sheet-artifact div.sheet-header-info div.sheet-part select,
+  input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer .sheet-container:not(.sheet-npc) div.sheet-artifact div.sheet-header-info div.sheet-part input {
+    border: none; }
+	
   div.sheet-licensecontainer.sheet-licensedsheet .sheet-container:not(.sheet-npc) div.sheet-artifact div.sheet-header-info div.sheet-part input[name=attr_artifact_essence],
   input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer .sheet-container:not(.sheet-npc) div.sheet-artifact div.sheet-header-info div.sheet-part input[name=attr_artifact_essence] {
+    width: 100px;
+	border: none; }
+	div.sheet-licensecontainer.sheet-licensedsheet .sheet-container:not(.sheet-npc) div.sheet-artifact div.sheet-header-info div.sheet-part input[name=attr_aether],
+  input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer .sheet-container:not(.sheet-npc) div.sheet-artifact div.sheet-header-info div.sheet-part input[name=attr_aether] {
     width: 100px;
 	border: none; }
   div.sheet-licensecontainer.sheet-licensedsheet .sheet-container:not(.sheet-npc) div.sheet-header div.sheet-part span.sheet-display,
@@ -4658,22 +4684,15 @@ input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer {
     padding: 14px;
     background-size: cover; }
   div.sheet-licensecontainer.sheet-licensedsheet .sheet-container.sheet-pc .sheet-spells .sheet-header .sheet-header-info,
-  input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer .sheet-container.sheet-pc .sheet-spells .sheet-header .sheet-header-info {
+  div.sheet-licensecontainer.sheet-licensedsheet .sheet-container.sheet-pc .sheet-artifact .sheet-header .sheet-header-info,
+  input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer .sheet-container.sheet-pc .sheet-spells .sheet-header .sheet-header-info,
+  input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer .sheet-container.sheet-pc .sheet-artifact .sheet-header .sheet-header-info  {
     background-image: url("https://raw.githubusercontent.com/mperes/Images-for-Roll20-5E-images/master/licensedsheet/SpellBox.svg?sanitize=true");
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
     -ms-flex-pack: distribute;
     justify-content: space-around; }
-  div.sheet-licensecontainer.sheet-licensedsheet .sheet-container.sheet-pc .sheet-spells .sheet-header .sheet-header-info .sheet-part,
-  div.sheet-licensecontainer.sheet-licensedsheet .sheet-container.sheet-pc .sheet-artifact .sheet-header .sheet-header-info .sheet-part,
-  input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer .sheet-container.sheet-pc .sheet-spells .sheet-header .sheet-header-info .sheet-part
-  input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer .sheet-container.sheet-pc .sheet-artifact .sheet-header .sheet-header-info .sheet-part,   {
-    background: url("https://raw.githubusercontent.com/mperes/Images-for-Roll20-5E-images/master/licensedsheet/SpellHeadBlock.svg?sanitize=true");
-    background-position: top center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 30%; }
 	
   div.sheet-licensecontainer.sheet-licensedsheet .sheet-container.sheet-pc .sheet-spells .sheet-header .sheet-header-info .sheet-part,
   div.sheet-licensecontainer.sheet-licensedsheet .sheet-container.sheet-pc .sheet-artifact .sheet-header .sheet-header-info .sheet-part,
@@ -4684,6 +4703,7 @@ input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer {
     background-size: contain;
     background-repeat: no-repeat;
     width: 30%; }
+	
   div.sheet-licensecontainer.sheet-licensedsheet .sheet-container:not(.sheet-npc) .sheet-attributes-container,
   input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer .sheet-container:not(.sheet-npc) .sheet-attributes-container {
     background: url("https://raw.githubusercontent.com/mperes/Images-for-Roll20-5E-images/master/licensedsheet/ability-back.svg?sanitize=true");
