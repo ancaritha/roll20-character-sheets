@@ -163,23 +163,30 @@ input[type=radio].sheet-tab-button:checked + span {
 input[type=radio].sheet-tab-button.sheet-core:checked ~ .sheet-page.sheet-core,
 input[type=radio].sheet-tab-button.sheet-bio:checked ~ .sheet-page.sheet-bio,
 input[type=radio].sheet-tab-button.sheet-spells:checked ~ .sheet-page.sheet-spells,
+input[type=radio].sheet-tab-button.sheet-artifact:checked ~ .sheet-page.sheet-artifact,
 input[type=radio].sheet-tab-button.sheet-options:checked ~ .sheet-page.sheet-options {
   display: block; }
 
 input[type=radio].sheet-tab-button.sheet-core,
 input[type=radio].sheet-tab-button.sheet-core + span {
-  right: 116px;
+  right: 194px;
   width: 45px; }
 
 input[type=radio].sheet-tab-button.sheet-bio,
 input[type=radio].sheet-tab-button.sheet-bio + span {
-  right: 83px;
+  right: 161px;
   width: 30px; }
 
 input[type=radio].sheet-tab-button.sheet-spells,
 input[type=radio].sheet-tab-button.sheet-spells + span {
-  right: 20px;
+  right: 98px;
   width: 60px; }
+  
+input[type=radio].sheet-tab-button.sheet-artifact,
+input[type=radio].sheet-tab-button.sheet-artifact + span {
+  right: 20px;
+  width: 75px; }
+  
 
 .sheet-header .sheet-top {
   height: 42px; }
@@ -3241,149 +3248,6 @@ By Miguel
 .sheet-showleveler[value="1"] + .sheet-levelerbutton {
   display: block; }
 
-/* Translation Overrides */
-/* Spanish */
-.lang-es .sheet-spell-container input[name="attr_spellcastingtime"] {
-  width: 115px; }
-
-.lang-es .sheet-spell-container input[name="attr_spellrange"] {
-  width: 200px; }
-
-.lang-es .sheet-spell-container input[name="attr_spelltarget"] {
-  width: 188px; }
-
-.lang-es .sheet-spell-container input[name="attr_spellduration"] {
-  width: 184px; }
-
-.lang-es .sheet-ac-init-speed-container div {
-  position: relative;
-  height: 56px; }
-
-.lang-es .sheet-ac-init-speed-container button,
-.lang-es .sheet-ac-init-speed-container .sheet-label {
-  position: absolute;
-  bottom: 0; }
-
-.lang-es .sheet-hdice-dsaves-container div.sheet-subcontainer {
-  position: relative;
-  height: 71px; }
-
-.lang-es .sheet-hdice-dsaves-container button {
-  position: absolute;
-  bottom: 0;
-  left: 0; }
-
-.lang-es .sheet-hp .sheet-top input[name="attr_hp_max"] {
-  width: 121px; }
-
-.lang-es .sheet-hlabel-container input[name="attr_race"] {
-  width: 190px; }
-
-.lang-es .sheet-hlabel-container input[name="attr_alignment"] {
-  width: 170px; }
-
-.lang-es .sheet-hlabel-container input[name="attr_experience"] {
-  width: 120px; }
-
-.lang-es .sheet-npc .sheet-npc_options input[name="attr_npc_actype"] {
-  width: 175px; }
-
-.lang-es .sheet-npc .sheet-npc_options input[name="attr_npc_hpformula"] {
-  width: 175px; }
-
-.lang-es .sheet-advantagetoggle input.sheet-toggle-left,
-.lang-es .sheet-advantagetoggle input.sheet-toggle-left + span {
-  right: 214px;
-  width: 67px; }
-
-.lang-es .sheet-advantagetoggle input.sheet-toggle-center,
-.lang-es .sheet-advantagetoggle input.sheet-toggle-center + span {
-  right: 145px;
-  width: 65px; }
-
-.lang-es .sheet-advantagetoggle input.sheet-toggle-right,
-.lang-es .sheet-advantagetoggle input.sheet-toggle-right + span {
-  right: 50px;
-  width: 91px; }
-
-.lang-es input[type=radio].sheet-tab-button.sheet-core,
-.lang-es input[type=radio].sheet-tab-button.sheet-core + span {
-  right: 137px;
-  width: 76px; }
-
-.lang-es input[type=radio].sheet-tab-button.sheet-bio,
-.lang-es input[type=radio].sheet-tab-button.sheet-bio + span {
-  right: 103px;
-  width: 30px; }
-
-.lang-es input[type=radio].sheet-tab-button.sheet-spells,
-.lang-es input[type=radio].sheet-tab-button.sheet-spells + span {
-  right: 21px;
-  width: 78px; }
-
-/* Czech */
-.charsheet.lang-cs input[type=radio].sheet-tab-button.sheet-core,
-.charsheet.lang-cs input[type=radio].sheet-tab-button.sheet-core + span {
-  width: 53px; }
-
-.charsheet.lang-cs select[name=attr_cust_spellslots] {
-  font-size: 9px; }
-
-.charsheet.lang-cs .sheet-spell .sheet-options span[data-i18n="at-higher-lvl-dmg:-u"],
-.charsheet.lang-cs .sheet-spell .sheet-options span[data-i18n="add-ability-mod-u"],
-.charsheet.lang-cs .sheet-spell .sheet-options span[data-i18n="saving-throw:-u"],
-.charsheet.lang-cs .sheet-spell .sheet-options span[data-i18n="effect:-u"],
-.charsheet.lang-cs .sheet-ac-init-speed-container .sheet-ac > span {
-  font-size: 8px; }
-
-.charsheet.lang-cs .sheet-subcontainer .sheet-top span[data-i18n="total"] + input {
-  width: 75px; }
-
-.charsheet.lang-cs .sheet-row span[data-i18n="senses-u"] + input,
-.charsheet.lang-cs .sheet-row span[data-i18n="npc-type-u"] + input {
-  width: 220px; }
-
-.charsheet.lang-cs .sheet-class {
-  width: 79px; }
-
-.charsheet.lang-cs .sheet-hlabel-container .sheet-multiclass-display {
-  width: 62px; }
-
-.charsheet.lang-cs .sheet-hlabel-container .sheet-multiclass-display-level {
-  width: 23px; }
-
-.charsheet.lang-cs .sheet-hlabel-container input.sheet-class-level {
-  width: 28px; }
-
-/* Italian */
-.charsheet.lang-it input[type=radio].sheet-tab-button.sheet-core,
-.charsheet.lang-it input[type=radio].sheet-tab-button.sheet-core + span {
-  right: 146px;
-  width: 60px; }
-
-.charsheet.lang-it input[type=radio].sheet-tab-button.sheet-bio,
-.charsheet.lang-it input[type=radio].sheet-tab-button.sheet-bio + span {
-  right: 113px;
-  width: 30px; }
-
-.charsheet.lang-it input[type=radio].sheet-tab-button.sheet-spells,
-.charsheet.lang-it input[type=radio].sheet-tab-button.sheet-spells + span {
-  right: 20px;
-  width: 90px; }
-
-.charsheet.lang-it div.sheet-licensecontainer .sheet-container.sheet-pc .sheet-spells .sheet-header .sheet-header-info .sheet-part {
-  width: 23%; }
-
-.charsheet.lang-it div.sheet-licensecontainer .sheet-container:not(.sheet-npc) div.sheet-page div.sheet-header div.sheet-name-container span {
-  margin-top: 19px;
-  margin-left: 30px; }
-
-.charsheet.lang-it .sheet-header .sheet-part input[type="text"],
-.charsheet.lang-it .sheet-header .sheet-part select {
-  height: 46px; }
-
-.charsheet.lang-it .sheet-header .sheet-part span.sheet-display {
-  height: 46px; }
 
 /*******************
  * CHARACTERMANCER *
