@@ -195,6 +195,9 @@ input[type=radio].sheet-tab-button.sheet-artifact + span {
   width: 157px;
   display: inline-block;
   text-align: center; }
+  
+.sheet-header .sheet-part .sheet-labelaether {
+  padding-top: 10px; }
 
 .sheet-header .sheet-part input[type=text],
 .sheet-header .sheet-part select {
@@ -221,6 +224,18 @@ input[type=radio].sheet-tab-button.sheet-artifact + span {
   
   .sheet-header .sheet-part input[type=textsmall] {
   font-size: 25px; }
+  
+.sheet-header .sheet-part input[type=number],
+.sheet-header .sheet-part select {
+  border: 1px solid #666;
+  border-radius: 5px;
+  height: 56px;
+  width: 110px;
+  text-align: center; }
+  
+  .sheet-header .sheet-part input[type=number] {
+  font-size: 20px; }
+  
 
 .sheet-header .sheet-part span.sheet-display {
   border: 1px solid #666;
@@ -2993,6 +3008,9 @@ By Miguel
 
 .sheet-hlabel-container [name="attr_experience"] {
   width: 100px; }
+  
+.sheet-hlabel-container [name="attr_aether_max"] {
+  margin-left: 40px; }
 
 .sheet-class {
   width: 64px; }
@@ -4613,7 +4631,12 @@ input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer {
     width: 140px !important; }
   div.sheet-licensecontainer.sheet-licensedsheet .sheet-container:not(.sheet-npc) div.sheet-header-info div.sheet-hlabel-container input[name=attr_artifact_name],
   input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer .sheet-container:not(.sheet-npc) div.sheet-header-info div.sheet-hlabel-container input[name=attr_artifact_name] {
-    width: 160px }
+    width: 160px; }
+ div.sheet-licensecontainer.sheet-licensedsheet .sheet-container:not(.sheet-npc) div.sheet-header-info div.sheet-hlabel-container input[name=attr_aether_max],
+  input.sheet-licensedsheet[value="0"] + div.sheet-licensecontainer .sheet-container:not(.sheet-npc) div.sheet-header-info div.sheet-hlabel-container input[name=attr_aether_max] {
+    width: 80px; 
+	text-align-last: center;
+	text-align: center;}
   div.sheet-licensecontainer.sheet-licensedsheet .sheet-container:not(.sheet-npc) div.sheet-spells div.sheet-header-info div.sheet-part,
   input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer .sheet-container:not(.sheet-npc) div.sheet-spells div.sheet-header-info div.sheet-part {
     width: 144px; }
