@@ -619,6 +619,17 @@ button[type=roll] * {
 .sheet-exhaustion div.sheet-ex-descriptions {
   display: inline-block;
   padding-top: 5px; }
+  
+.sheet-attunements-container div.sheet-at-descriptions {
+  font-size: 9px;
+  line-height: 9px;
+  text-align: left;
+  width: 140px;
+  display: block;
+  margin-left: 10px;
+  margin-right: 10px; 
+  border: 1px solid #666;
+  border-radius: 5px; }
 
 .sheet-exhaustion-toggle[value="0"] ~ .sheet-exhaustion {
   display: none; }
@@ -663,12 +674,11 @@ button[type=roll] * {
   margin-bottom: 10px; }
   
   .sheet-attunements-container div {
-  width: calc(31%);
+  width: calc(25%);
   height: 100%;
-  border: 1px solid #666;
-  border-radius: 5px;
   display: inline-block;
-  vertical-align: top; }
+  vertical-align: top; 
+  }
 
 .sheet-ac-init-speed-container div {
   width: calc(31%);
@@ -4905,23 +4915,15 @@ input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer {
   input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer .sheet-container:not(.sheet-npc) .sheet-resources .sheet-hdice-dsaves-container {
     padding: 0 0 10px; }
 	  
-  div.sheet-licensecontainer .sheet-container:not(.sheet-npc) .sheet-attunement-fire  {
+  div.sheet-licensecontainer .sheet-container:not(.sheet-npc) .sheet-attunements-container .sheet-attunement-image  {
     background: url("https://raw.githubusercontent.com/mperes/Images-for-Roll20-5E-images/master/licensedsheet/AC.svg?sanitize=true");
     background-repeat: no-repeat;
-    margin-left: 75px;
+    margin-left: 40px;
     background-size: contain;
+	min-width: 90px;
     min-height: 100px !important;
     border: 0 !important; }
 	
-  div.sheet-licensecontainer .sheet-container:not(.sheet-npc) .sheet-attunement-water,
-  div.sheet-licensecontainer .sheet-container:not(.sheet-npc) .sheet-attunement-wind,
-  div.sheet-licensecontainer .sheet-container:not(.sheet-npc) .sheet-attunement-earth  {
-    background: url("https://raw.githubusercontent.com/mperes/Images-for-Roll20-5E-images/master/licensedsheet/AC.svg?sanitize=true");
-    background-repeat: no-repeat;
-    margin-left: 0px;
-    background-size: contain;
-    min-height: 100px !important;
-    border: 0 !important; }
 
 	
   div.sheet-licensecontainer .sheet-container:not(.sheet-npc) .sheet-attunements-container .sheet-attunement-fire input,
@@ -4929,13 +4931,20 @@ input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer {
   div.sheet-licensecontainer .sheet-container:not(.sheet-npc) .sheet-attunements-container .sheet-attunement-wind input,
   div.sheet-licensecontainer .sheet-container:not(.sheet-npc) .sheet-attunements-container .sheet-attunement-earth input,  {
     margin-top: 25px; 
-	margin-left: 15px; 
+	margin-left: 21px; 
 	width: 55px; }
+	
+  div.sheet-licensecontainer .sheet-container:not(.sheet-npc) .sheet-attunements-header .sheet-pc-attunements-header  {
+	margin-top: 30px; 
+	font-size: 22px;
+	text-align: center;
+    line-height: 12px !important; }
 	
   div.sheet-licensecontainer .sheet-container:not(.sheet-npc) .sheet-attunements-container .sheet-pc-attunements  {
     width: 90px;
 	font-size: 14px;
-    margin-left: 0;
+    margin-left: 0px;
+	margin-top: 5px; 
     line-height: 12px !important; }
 	
   div.sheet-licensecontainer.sheet-licensedsheet .sheet-container:not(.sheet-npc) .sheet-ac-init-speed-container .sheet-ac,

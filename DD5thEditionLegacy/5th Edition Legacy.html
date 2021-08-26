@@ -4621,22 +4621,55 @@
 			</div>			
 		</div>
 		<div class="body"> 
+			<div class="attunements-header">
+				<span class="label pc-attunements-header" data-i18n="attunements-name-u">ATTUNEMENTS</span>
+			</div> 
 			<div class="attunements-container">
+				<div class="attunement-dummy">
+				</div>
 				<div class="attunement-fire">
-					<input type="text" name="attr_attunement_fire" title="@{attunement_fire}">
-					<span class="label pc-attunements" data-i18n="attunement-fire-u">FIRE ATTUNEMENTS</span>
+					<div class="attunement-image">
+						<input type="number" name="attr_attunement_fire" title="@{attunement_fire}" step="1" min="0" max="6">
+						<span class="label pc-attunements" data-i18n="attunement-fire-u">FIRE</span>
+					</div>
+					<div class="at-descriptions">					
+						<span class="at-description" name="attr_fire_describe"></span>						
+					</div>
 				</div>
+				
 				<div class="attunement-water">
-					<input type="text" name="attr_attunement_water" title="@{attunement_water}">
-					<span class="label pc-attunements" data-i18n="attunement-water-u">WATER ATTUNEMENTS</span>
+					<div class="attunement-image">
+						<input type="number" name="attr_attunement_water" title="@{attunement_water}" step="1" min="0" max="6">
+						<span class="label pc-attunements" data-i18n="attunement-water-u">WATER</span>
+					</div>
+					<div class="at-descriptions">					
+						<span class="at-description" name="attr_water_describe"></span>
+					</div>					
 				</div>
+				
 				<div class="attunement-wind">
-					<input type="text" name="attr_attunement_wind" title="@{attunement_wind}">
-					<span class="label pc-attunements" data-i18n="attunement-wind-u">WIND ATTUNEMENTS</span>
+					<div class="attunement-image">
+						<input type="number" name="attr_attunement_wind" title="@{attunement_wind}" step="1" min="0" max="6">
+						<span class="label pc-attunements" data-i18n="attunement-wind-u">WIND</span>
+					</div>
+					<div class="at-descriptions">					
+						<span class="at-description" name="attr_wind_describe"></span>
+					</div>
 				</div>
+				
 				<div class="attunement-earth">
-					<input type="text" name="attr_attunement_earth" title="@{attunement_earth}">
-					<span class="label pc-attunements" data-i18n="attunement-earth-u">EARTH ATTUNEMENTS</span>
+					<div class="attunement-image">
+						<input type="number" name="attr_attunement_earth" title="@{attunement_earth}" step="1" min="0" max="6">
+						<span class="label pc-attunements" data-i18n="attunement-earth-u">EARTH</span>
+					</div>
+					<div class="at-descriptions">					
+						<span class="at-description" name="attr_earth_describe"></span>
+					</div>
+					
+					
+				</div>
+				
+				<div class="attunement-dummy">
 				</div>
 			</div>
 		</div>
@@ -5392,6 +5425,17 @@
 <input type="hidden" name="attr_exhaustion_4" value="">
 <input type="hidden" name="attr_exhaustion_5" value="">
 <input type="hidden" name="attr_exhaustion_6" value="">
+
+<input type="hidden" name="attr_fire_describe" value="">
+<input type="hidden" name="attr_fire_describe1" value="">
+<input type="hidden" name="attr_fire_describe2" value="">
+<input type="hidden" name="attr_fire_describe3" value="">
+<input type="hidden" name="attr_fire_describe4" value="">
+<input type="hidden" name="attr_fire_describe5" value="">
+<input type="hidden" name="attr_fire_describe6" value="">
+<input type="hidden" name="attr_water_describe" value="">
+<input type="hidden" name="attr_wind_describe" value="">
+<input type="hidden" name="attr_earth_describe" value="">
 
 <input type="hidden" name="attr_strength_mod" value="0">
 <input type="hidden" name="attr_dexterity_mod" value="0">
@@ -6909,6 +6953,44 @@
 
         setAttrs(update, {silent: true});
     });
+	
+	on("change:attunement_fire", function(eventinfo) {
+        const newValue = parseInt(eventinfo.newValue) || 0, previousValue = parseInt(eventinfo.previousValue) || 0;
+        let update = {};
+
+		update[`fire_describe`] = "• " + getTranslationByKey(`fire-${newValue}`)
+		update[`fire_describe`] += "\n• blue"
+		update[`fire_describe`] += "\r• red"
+		update[`fire_describe`] += $("textarea").get(0).scrollHeight
+		
+        setAttrs(update, {silent: true});
+    });
+	
+	on("change:attunement_water", function(eventinfo) {
+        const newValue = parseInt(eventinfo.newValue) || 0, previousValue = parseInt(eventinfo.previousValue) || 0;
+        let update = {};
+
+		update[`water_describe`] = "• " + getTranslationByKey(`water-${newValue}`)
+        setAttrs(update, {silent: true});
+    });
+	
+	on("change:attunement_wind", function(eventinfo) {
+        const newValue = parseInt(eventinfo.newValue) || 0, previousValue = parseInt(eventinfo.previousValue) || 0;
+        let update = {};
+
+		update[`wind_describe`] = "• " + getTranslationByKey(`wind-${newValue}`)
+        setAttrs(update, {silent: true});
+    });
+	
+	on("change:attunement_earth", function(eventinfo) {
+        const newValue = parseInt(eventinfo.newValue) || 0, previousValue = parseInt(eventinfo.previousValue) || 0;
+        let update = {};
+
+		update[`earth_describe`] = "• " + getTranslationByKey(`earth-${newValue}`)
+        setAttrs(update, {silent: true});
+    });
+	
+	
 
     on("change:race change:subrace", function(eventinfo) {
         update_race_display();
