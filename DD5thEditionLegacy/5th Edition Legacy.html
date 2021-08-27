@@ -4633,7 +4633,10 @@
 						<span class="label pc-attunements" data-i18n="attunement-fire-u">FIRE</span>
 					</div>
 					<div class="at-descriptions">					
-						<span class="at-description" name="attr_fire_describe"></span>						
+						<span class="at-description" name="attr_fire_describe"></span>
+						<span class="at-description" name="attr_fire_describe1"></span>
+						<span class="at-description" name="attr_fire_describe2"></span>
+						<span class="at-description" name="attr_fire_describe3"></span>
 					</div>
 				</div>
 				
@@ -4644,6 +4647,9 @@
 					</div>
 					<div class="at-descriptions">					
 						<span class="at-description" name="attr_water_describe"></span>
+						<span class="at-description" name="attr_water_describe1"></span>
+						<span class="at-description" name="attr_water_describe2"></span>
+						<span class="at-description" name="attr_water_describe3"></span>
 					</div>					
 				</div>
 				
@@ -4654,6 +4660,9 @@
 					</div>
 					<div class="at-descriptions">					
 						<span class="at-description" name="attr_wind_describe"></span>
+						<span class="at-description" name="attr_wind_describe1"></span>
+						<span class="at-description" name="attr_wind_describe2"></span>
+						<span class="at-description" name="attr_wind_describe3"></span>
 					</div>
 				</div>
 				
@@ -4664,6 +4673,9 @@
 					</div>
 					<div class="at-descriptions">					
 						<span class="at-description" name="attr_earth_describe"></span>
+						<span class="at-description" name="attr_earth_describe1"></span>
+						<span class="at-description" name="attr_earth_describe2"></span>
+						<span class="at-description" name="attr_earth_describe3"></span>
 					</div>
 					
 					
@@ -5430,12 +5442,18 @@
 <input type="hidden" name="attr_fire_describe1" value="">
 <input type="hidden" name="attr_fire_describe2" value="">
 <input type="hidden" name="attr_fire_describe3" value="">
-<input type="hidden" name="attr_fire_describe4" value="">
-<input type="hidden" name="attr_fire_describe5" value="">
-<input type="hidden" name="attr_fire_describe6" value="">
 <input type="hidden" name="attr_water_describe" value="">
+<input type="hidden" name="attr_water_describe1" value="">
+<input type="hidden" name="attr_water_describe2" value="">
+<input type="hidden" name="attr_water_describe3" value="">
 <input type="hidden" name="attr_wind_describe" value="">
+<input type="hidden" name="attr_wind_describe1" value="">
+<input type="hidden" name="attr_wind_describe2" value="">
+<input type="hidden" name="attr_wind_describe3" value="">
 <input type="hidden" name="attr_earth_describe" value="">
+<input type="hidden" name="attr_earth_describe1" value="">
+<input type="hidden" name="attr_earth_describe2" value="">
+<input type="hidden" name="attr_earth_describe3" value="">
 
 <input type="hidden" name="attr_strength_mod" value="0">
 <input type="hidden" name="attr_dexterity_mod" value="0">
@@ -6958,19 +6976,53 @@
         const newValue = parseInt(eventinfo.newValue) || 0, previousValue = parseInt(eventinfo.previousValue) || 0;
         let update = {};
 
-		update[`fire_describe`] = "• " + getTranslationByKey(`fire-${newValue}`)
-		update[`fire_describe`] += "\n• blue"
-		update[`fire_describe`] += "\r• red"
-		update[`fire_describe`] += $("textarea").get(0).scrollHeight
+		update[`fire_describe`] = ""
+		update[`fire_describe1`] = ""
+		update[`fire_describe2`] = ""
+		update[`fire_describe3`] = ""
 		
+		switch(newValue)
+		{
+		case 0:
+			update[`fire_describe`] = "• " + getTranslationByKey(`attunement-none`)
+			break;
+		case 1:
+			update[`fire_describe`] = "• " + getTranslationByKey(`fire-1`)
+			update[`fire_describe1`] = "• " + getTranslationByKey(`fire-2`)
+			update[`fire_describe2`] = "• " + getTranslationByKey(`attunement-recovery`)
+			break;
+		default:
+			update[`fire_describe`] = "• " + getTranslationByKey(`attunement-unknown`) 
+		}
+
         setAttrs(update, {silent: true});
     });
+
 	
 	on("change:attunement_water", function(eventinfo) {
         const newValue = parseInt(eventinfo.newValue) || 0, previousValue = parseInt(eventinfo.previousValue) || 0;
         let update = {};
 
-		update[`water_describe`] = "• " + getTranslationByKey(`water-${newValue}`)
+		update[`water_describe`] = ""
+		update[`water_describe1`] = ""
+		update[`water_describe2`] = ""
+		update[`water_describe3`] = ""
+		
+		switch(newValue)
+		{
+		case 0:
+			update[`water_describe`] = "• " + getTranslationByKey(`attunement-none`)
+			break;
+		case 1:
+			update[`water_describe`] = "• " + getTranslationByKey(`water-1`)
+			update[`water_describe1`] = "• " + getTranslationByKey(`water-2`)
+			update[`water_describe2`] = "• " + getTranslationByKey(`attunement-recovery`)
+			break;
+		default:
+			update[`water_describe`] = "• " + getTranslationByKey(`attunement-unknown`) 
+			break;
+		}
+		
         setAttrs(update, {silent: true});
     });
 	
@@ -6978,7 +7030,26 @@
         const newValue = parseInt(eventinfo.newValue) || 0, previousValue = parseInt(eventinfo.previousValue) || 0;
         let update = {};
 
-		update[`wind_describe`] = "• " + getTranslationByKey(`wind-${newValue}`)
+		update[`wind_describe`] = ""
+		update[`wind_describe1`] = ""
+		update[`wind_describe2`] = ""
+		update[`wind_describe3`] = ""
+		
+		switch(newValue)
+		{
+		case 0:
+			update[`wind_describe`] = "• " + getTranslationByKey(`attunement-none`)
+			break;
+		case 1:
+			update[`wind_describe`] = "• " + getTranslationByKey(`wind-1`)
+			update[`wind_describe1`] = "• " + getTranslationByKey(`wind-2`)
+			update[`wind_describe2`] = "• " + getTranslationByKey(`attunement-recovery`)
+			break;
+		default:
+			update[`wind_describe`] = "• " + getTranslationByKey(`attunement-unknown`) 
+			break;
+		}
+		
         setAttrs(update, {silent: true});
     });
 	
@@ -6986,7 +7057,26 @@
         const newValue = parseInt(eventinfo.newValue) || 0, previousValue = parseInt(eventinfo.previousValue) || 0;
         let update = {};
 
-		update[`earth_describe`] = "• " + getTranslationByKey(`earth-${newValue}`)
+		update[`earth_describe`] = ""
+		update[`earth_describe1`] = ""
+		update[`earth_describe2`] = ""
+		update[`earth_describe3`] = ""
+		
+		switch(newValue)
+		{
+		case 0:
+			update[`earth_describe`] = "• " + getTranslationByKey(`attunement-none`)
+			break;
+		case 1:
+			update[`earth_describe`] = "• " + getTranslationByKey(`earth-1`)
+			update[`earth_describe1`] = "• " + getTranslationByKey(`earth-2`)
+			update[`earth_describe2`] = "• " + getTranslationByKey(`attunement-recovery`)
+			break;
+		default:
+			update[`earth_describe`] = "• " + getTranslationByKey(`attunement-unknown`) 
+			break;
+		}
+		
         setAttrs(update, {silent: true});
     });
 	

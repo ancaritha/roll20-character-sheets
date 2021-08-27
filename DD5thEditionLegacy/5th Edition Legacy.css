@@ -621,10 +621,10 @@ button[type=roll] * {
   padding-top: 5px; }
   
 .sheet-attunements-container div.sheet-at-descriptions {
-  font-size: 9px;
-  line-height: 9px;
+  font-size: 10px;
+  line-height: 12px;
   text-align: left;
-  width: 140px;
+  width: 160px;
   display: block;
   margin-left: 10px;
   margin-right: 10px; 
@@ -4918,9 +4918,9 @@ input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer {
   div.sheet-licensecontainer .sheet-container:not(.sheet-npc) .sheet-attunements-container .sheet-attunement-image  {
     background: url("https://raw.githubusercontent.com/mperes/Images-for-Roll20-5E-images/master/licensedsheet/AC.svg?sanitize=true");
     background-repeat: no-repeat;
-    margin-left: 40px;
+    margin-left: 50px;
     background-size: contain;
-	min-width: 90px;
+	min-width: 100px;
     min-height: 100px !important;
     border: 0 !important; }
 	
@@ -4931,7 +4931,7 @@ input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer {
   div.sheet-licensecontainer .sheet-container:not(.sheet-npc) .sheet-attunements-container .sheet-attunement-wind input,
   div.sheet-licensecontainer .sheet-container:not(.sheet-npc) .sheet-attunements-container .sheet-attunement-earth input,  {
     margin-top: 25px; 
-	margin-left: 21px; 
+	margin-left: 20px; 
 	width: 55px; }
 	
   div.sheet-licensecontainer .sheet-container:not(.sheet-npc) .sheet-attunements-header .sheet-pc-attunements-header  {
