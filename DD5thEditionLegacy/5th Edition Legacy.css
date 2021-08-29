@@ -630,6 +630,31 @@ button[type=roll] * {
   margin-right: 10px; 
   border: 1px solid #666;
   border-radius: 5px; }
+  
+  .sheet-at-descriptions {
+    outline: none;
+    cursor: help;
+}
+.sheet-at-descriptions strong { line-height: 30px; }
+.sheet-at-descriptions:hover textarea {
+    display: block;
+    position: absolute;
+}
+.sheet-at-descriptions:hover { text-decoration: none; }
+.sheet-at-descriptions textarea {
+    display: none;
+    border-radius: 4px;
+    box-shadow: 5px 5px 8px #ccc;
+    z-index: 10;
+    padding: 14px 20px;
+    margin-top: -30px;
+    margin-left: 28px;
+    width: 300px;
+    line-height: 16px;
+    color: #111;
+    border: 1px solid #dca;
+    background: #fffaf0;
+}
 
 .sheet-exhaustion-toggle[value="0"] ~ .sheet-exhaustion {
   display: none; }

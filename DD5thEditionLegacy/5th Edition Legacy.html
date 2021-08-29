@@ -4632,7 +4632,8 @@
 						<input type="number" name="attr_attunement_fire" title="@{attunement_fire}" step="1" min="0" max="6">
 						<span class="label pc-attunements" data-i18n="attunement-fire-u">FIRE</span>
 					</div>
-					<div class="at-descriptions">					
+					<div class="at-descriptions">
+						<textarea name="attr_fire_tooltip" readonly>temp text</textarea>
 						<span class="at-description" name="attr_fire_describe"></span>
 						<span class="at-description" name="attr_fire_describe1"></span>
 						<span class="at-description" name="attr_fire_describe2"></span>
@@ -4645,7 +4646,8 @@
 						<input type="number" name="attr_attunement_water" title="@{attunement_water}" step="1" min="0" max="6">
 						<span class="label pc-attunements" data-i18n="attunement-water-u">WATER</span>
 					</div>
-					<div class="at-descriptions">					
+					<div class="at-descriptions">
+						<textarea name="attr_water_tooltip" readonly>temp text</textarea>
 						<span class="at-description" name="attr_water_describe"></span>
 						<span class="at-description" name="attr_water_describe1"></span>
 						<span class="at-description" name="attr_water_describe2"></span>
@@ -4658,7 +4660,8 @@
 						<input type="number" name="attr_attunement_wind" title="@{attunement_wind}" step="1" min="0" max="6">
 						<span class="label pc-attunements" data-i18n="attunement-wind-u">WIND</span>
 					</div>
-					<div class="at-descriptions">					
+					<div class="at-descriptions">
+						<textarea name="attr_wind_tooltip" readonly>temp text</textarea>					
 						<span class="at-description" name="attr_wind_describe"></span>
 						<span class="at-description" name="attr_wind_describe1"></span>
 						<span class="at-description" name="attr_wind_describe2"></span>
@@ -4671,7 +4674,8 @@
 						<input type="number" name="attr_attunement_earth" title="@{attunement_earth}" step="1" min="0" max="6">
 						<span class="label pc-attunements" data-i18n="attunement-earth-u">EARTH</span>
 					</div>
-					<div class="at-descriptions">					
+					<div class="at-descriptions">
+						<textarea name="attr_earth_tooltip" readonly>temp text</textarea>					
 						<span class="at-description" name="attr_earth_describe"></span>
 						<span class="at-description" name="attr_earth_describe1"></span>
 						<span class="at-description" name="attr_earth_describe2"></span>
@@ -6980,19 +6984,26 @@
 		update[`fire_describe1`] = ""
 		update[`fire_describe2`] = ""
 		update[`fire_describe3`] = ""
+		update[`fire_tooltip`] = ""
 		
 		switch(newValue)
 		{
 		case 0:
 			update[`fire_describe`] = "• " + getTranslationByKey(`attunement-none`)
+			update[`fire_tooltip`] = "• " + getTranslationByKey(`attunement-none`)
 			break;
 		case 1:
 			update[`fire_describe`] = "• " + getTranslationByKey(`fire-1`)
 			update[`fire_describe1`] = "• " + getTranslationByKey(`fire-2`)
 			update[`fire_describe2`] = "• " + getTranslationByKey(`attunement-recovery`)
+			
+			update[`fire_tooltip`] = "• " + getTranslationByKey(`fire-1-full`)
+			update[`fire_tooltip`] += "\n\n• " + getTranslationByKey(`fire-2-full`)
+			update[`fire_tooltip`] += "\n\n• " + getTranslationByKey(`attunement-recovery-full`)
 			break;
 		default:
 			update[`fire_describe`] = "• " + getTranslationByKey(`attunement-unknown`) 
+			update[`fire_tooltip`] = "• " + getTranslationByKey(`attunement-unknown`) 
 		}
 
         setAttrs(update, {silent: true});
@@ -7007,19 +7018,26 @@
 		update[`water_describe1`] = ""
 		update[`water_describe2`] = ""
 		update[`water_describe3`] = ""
+		update[`water_tooltip`] = ""
 		
 		switch(newValue)
 		{
 		case 0:
 			update[`water_describe`] = "• " + getTranslationByKey(`attunement-none`)
+			update[`water_tooltip`] = "• " + getTranslationByKey(`attunement-none`)
 			break;
 		case 1:
 			update[`water_describe`] = "• " + getTranslationByKey(`water-1`)
 			update[`water_describe1`] = "• " + getTranslationByKey(`water-2`)
 			update[`water_describe2`] = "• " + getTranslationByKey(`attunement-recovery`)
+			
+			update[`water_tooltip`] = "• " + getTranslationByKey(`water-1-full`)
+			update[`water_tooltip`] += "\n\n• " + getTranslationByKey(`water-2-full`)
+			update[`water_tooltip`] += "\n\n• " + getTranslationByKey(`attunement-recovery-full`)
 			break;
 		default:
 			update[`water_describe`] = "• " + getTranslationByKey(`attunement-unknown`) 
+			update[`water_tooltip`] = "• " + getTranslationByKey(`attunement-unknown`) 
 			break;
 		}
 		
@@ -7034,19 +7052,26 @@
 		update[`wind_describe1`] = ""
 		update[`wind_describe2`] = ""
 		update[`wind_describe3`] = ""
+		update[`wind_tooltip`] = ""
 		
 		switch(newValue)
 		{
 		case 0:
 			update[`wind_describe`] = "• " + getTranslationByKey(`attunement-none`)
+			update[`wind_tooltip`] = "• " + getTranslationByKey(`attunement-none`)
 			break;
 		case 1:
 			update[`wind_describe`] = "• " + getTranslationByKey(`wind-1`)
 			update[`wind_describe1`] = "• " + getTranslationByKey(`wind-2`)
 			update[`wind_describe2`] = "• " + getTranslationByKey(`attunement-recovery`)
+			
+			update[`wind_tooltip`] = "• " + getTranslationByKey(`wind-1-full`)
+			update[`wind_tooltip`] += "\n\n• " + getTranslationByKey(`wind-2-full`)
+			update[`wind_tooltip`] += "\n\n• " + getTranslationByKey(`attunement-recovery-full`)
 			break;
 		default:
 			update[`wind_describe`] = "• " + getTranslationByKey(`attunement-unknown`) 
+			update[`wind_tooltip`] = "• " + getTranslationByKey(`attunement-unknown`) 
 			break;
 		}
 		
@@ -7061,19 +7086,26 @@
 		update[`earth_describe1`] = ""
 		update[`earth_describe2`] = ""
 		update[`earth_describe3`] = ""
+		update[`earth_tooltip`] = ""
 		
 		switch(newValue)
 		{
 		case 0:
 			update[`earth_describe`] = "• " + getTranslationByKey(`attunement-none`)
+			update[`earth_tooltip`] = "• " + getTranslationByKey(`attunement-none`)
 			break;
 		case 1:
 			update[`earth_describe`] = "• " + getTranslationByKey(`earth-1`)
 			update[`earth_describe1`] = "• " + getTranslationByKey(`earth-2`)
 			update[`earth_describe2`] = "• " + getTranslationByKey(`attunement-recovery`)
+			
+			update[`earth_tooltip`] = "• " + getTranslationByKey(`earth-1-full`)
+			update[`earth_tooltip`] += "\n\n• " + getTranslationByKey(`earth-2-full`)
+			update[`earth_tooltip`] += "\n\n• " + getTranslationByKey(`attunement-recovery-full`)
 			break;
 		default:
 			update[`earth_describe`] = "• " + getTranslationByKey(`attunement-unknown`) 
+			update[`earth_tooltip`] = "• " + getTranslationByKey(`attunement-unknown`) 
 			break;
 		}
 		
