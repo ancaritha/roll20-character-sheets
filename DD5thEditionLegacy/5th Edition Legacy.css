@@ -4905,6 +4905,12 @@ input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer {
     background-position: top center;
     background-size: contain; }
 	
+  div.sheet-licensecontainer .sheet-container:not(.sheet-npc) .sheet-artifact-col {
+    background: url("https://raw.githubusercontent.com/mperes/Images-for-Roll20-5E-images/master/licensedsheet/vitals.svg?sanitize=true");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: contain; }
+	
   div.sheet-licensecontainer .sheet-container:not(.sheet-npc) .sheet-attunements-container {
     width: 100% !important;
     margin: 0;
@@ -4971,6 +4977,11 @@ input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer {
     margin-left: 0px;
 	margin-top: 5px; 
     line-height: 12px !important; }
+	
+	div.sheet-licensecontainer .sheet-container:not(.sheet-npc) .sheet-artifact-skills-container .sheet-artifact-skills-header  {
+	margin-top: 20px; 
+	font-size: 16px;
+	text-align: center; }
 	
   div.sheet-licensecontainer.sheet-licensedsheet .sheet-container:not(.sheet-npc) .sheet-ac-init-speed-container .sheet-ac,
   input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer .sheet-container:not(.sheet-npc) .sheet-ac-init-speed-container .sheet-ac {
