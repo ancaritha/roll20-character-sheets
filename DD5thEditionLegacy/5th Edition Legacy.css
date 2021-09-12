@@ -799,10 +799,19 @@ button[type=roll] * {
   float: right;
   margin-right: 5px;
   margin-top: 5px; }
+  
+ .sheet-artifact-row-container {
+  float: left;
+  margin-right: 5px;
+  margin-top: 5px; }
 
 .sheet-hdice-dsaves-container .sheet-row-container span {
   display: inline-block;
   width: inherit; }
+
+.sheet-artifact-row-container span {
+  display: inline-block;
+  width: inherit; }    
 
 .sheet-money {
   width: 70px;
@@ -4905,12 +4914,6 @@ input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer {
     background-position: top center;
     background-size: contain; }
 	
-  div.sheet-licensecontainer .sheet-container:not(.sheet-npc) .sheet-artifact-col {
-    background: url("https://raw.githubusercontent.com/mperes/Images-for-Roll20-5E-images/master/licensedsheet/vitals.svg?sanitize=true");
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: contain; }
-	
   div.sheet-licensecontainer .sheet-container:not(.sheet-npc) .sheet-attunements-container {
     width: 100% !important;
     margin: 0;
@@ -4978,10 +4981,17 @@ input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer {
 	margin-top: 5px; 
     line-height: 12px !important; }
 	
-	div.sheet-licensecontainer .sheet-container:not(.sheet-npc) .sheet-artifact-skills-container .sheet-artifact-skills-header  {
+  div.sheet-licensecontainer .sheet-container:not(.sheet-npc) .sheet-artifact-skills-container .sheet-artifact-skills-header  {
 	margin-top: 20px; 
 	font-size: 16px;
-	text-align: center; }
+	text-align: center; }	
+	
+  div.sheet-licensecontainer .sheet-container:not(.sheet-npc) .sheet-artifact-skills-container .sheet-artifact-skill  {
+	margin-top: 5px; 
+	margin-left: 8px; 
+	margin-right: 2px;
+	font-size: 14px;
+	text-align: left; }	
 	
   div.sheet-licensecontainer.sheet-licensedsheet .sheet-container:not(.sheet-npc) .sheet-ac-init-speed-container .sheet-ac,
   input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer .sheet-container:not(.sheet-npc) .sheet-ac-init-speed-container .sheet-ac {
@@ -5070,6 +5080,19 @@ input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer {
     border-image-repeat: round;
     -webkit-clip-path: polygon(0% var(--topNotchSize), var(--topNotchSize) 0%, calc(100% - var(--topNotchSize)) 0%, 100% var(--topNotchSize), 100% calc(100% - var(--bottomNotchSize)), calc(100% - var(--bottomNotchSize)) 100%, var(--bottomNotchSize) 100%, 0% calc(100% - var(--bottomNotchSize)));
     clip-path: polygon(0% var(--topNotchSize), var(--topNotchSize) 0%, calc(100% - var(--topNotchSize)) 0%, 100% var(--topNotchSize), 100% calc(100% - var(--bottomNotchSize)), calc(100% - var(--bottomNotchSize)) 100%, var(--bottomNotchSize) 100%, 0% calc(100% - var(--bottomNotchSize))); }
+	
+  div.sheet-licensecontainer .sheet-container:not(.sheet-npc) .sheet-artifact-row-container input[type="checkbox"] {
+	margin: 0px -1px;
+    border-radius: 50%;
+    border: 2px solid #000 !important;
+    width: 1em;
+    height: 1em;
+    background-color: white;
+    vertical-align: middle;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer; }
+	
   div.sheet-licensecontainer.sheet-licensedsheet .sheet-container:not(.sheet-npc) .sheet-subcontainer .sheet-row-container input[type="checkbox"],
   input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer .sheet-container:not(.sheet-npc) .sheet-subcontainer .sheet-row-container input[type="checkbox"] {
     margin: 0px -2px;
@@ -5082,6 +5105,7 @@ input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer {
     -webkit-appearance: none;
     outline: none;
     cursor: pointer; }
+  div.sheet-licensecontainer .sheet-container:not(.sheet-npc) .sheet-artifact-row-container input[type="checkbox"]:checked,
   div.sheet-licensecontainer.sheet-licensedsheet .sheet-container:not(.sheet-npc) .sheet-subcontainer .sheet-row-container input[type="checkbox"]:checked,
   input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer .sheet-container:not(.sheet-npc) .sheet-subcontainer .sheet-row-container input[type="checkbox"]:checked {
     background-color: #EC2127; }
