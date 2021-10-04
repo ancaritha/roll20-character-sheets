@@ -4986,6 +4986,18 @@ input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer {
 	font-size: 16px;
 	text-align: center; }	
 	
+div.sheet-licensecontainer .sheet-container:not(.sheet-npc) .sheet-artifact-skills-container .sheet-artifact-skills-type-active  {
+	margin-top: 18px; 
+	font-size: 14px;
+	text-align: center; 
+	color: red;}	
+	
+div.sheet-licensecontainer .sheet-container:not(.sheet-npc) .sheet-artifact-skills-container .sheet-artifact-skills-type-passive  {
+	margin-top: 18px; 
+	font-size: 14px;
+	text-align: center; 
+	color: blue;}	
+	
   div.sheet-licensecontainer .sheet-container:not(.sheet-npc) .sheet-artifact-skills-container .sheet-artifact-skill  {
 	margin-top: 5px; 
 	margin-left: 8px; 
