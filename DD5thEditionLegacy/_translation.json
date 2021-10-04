@@ -266,6 +266,10 @@
 	"earth-4": "",
 	"earth-5": "",
 	"earth-6": "",
+	
+	"activepowers-u": "--- Active Powers ---",
+	"passivepowers-u": "--- Passive Powers ---",
+	
 	"spellfocus-u": "Spell Focus",
 	"magicallyreinforced-u": "Magically Reinforced",
 	"pactweapon-u": "Pact Weapon",
