@@ -803,7 +803,10 @@ button[type=roll] * {
  .sheet-artifact-row-container {
   float: left;
   margin-right: 5px;
-  margin-top: 5px; }
+  margin-top: 5px; 
+  outline: none;
+  cursor: help;
+  }
 
 .sheet-hdice-dsaves-container .sheet-row-container span {
   display: inline-block;
@@ -812,6 +815,29 @@ button[type=roll] * {
 .sheet-artifact-row-container span {
   display: inline-block;
   width: inherit; }    
+    
+
+.sheet-artifact-row-container:hover textarea {
+    display: block;
+    position: absolute;
+}
+.sheet-artifact-row-container:hover { text-decoration: none; }
+.sheet-artifact-row-container textarea {
+    display: none;
+    border-radius: 2px;
+    box-shadow: 3px 3px 5px #ccc;
+    z-index: 10;
+    padding: 5px 5px;
+    margin-top: -12px;
+    margin-left: 30px;
+    width: 250px;
+	height: 30px;
+    line-height: 14px;
+    color: #111;
+    border: 1px solid #dca;
+    background: #fffaf0;
+}
+
 
 .sheet-money {
   width: 70px;
