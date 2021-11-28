@@ -2406,8 +2406,12 @@ By Miguel
   width: 20px;
   text-align: center; }
 
-.sheet-npc .sheet-col {
-  width: calc(33% - 5px); }
+.sheet-npc .sheet-col1 {
+  width: calc(50% - 10px); }
+  
+.sheet-npc .sheet-col2 {
+  width: calc(50% - 20px);
+  margin-left: 15px;  }
 
 .sheet-npc .sheet-spacer {
   height: 5px; }
@@ -4632,8 +4636,8 @@ input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer {
     margin-left: -50px;
     width: 850px;
     height: 140px; }
-  div.sheet-licensecontainer.sheet-licensedsheet .sheet-advantagetoggle,
-  input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer .sheet-advantagetoggle {
+  div.sheet-licensecontainer.sheet-licensedsheet .sheet-container:not(.sheet-npc) .sheet-advantagetoggle,
+  input.sheet-licensedsheet[value="1"] + div.sheet-licensecontainer .sheet-container:not(.sheet-npc) .sheet-advantagetoggle {
     top: 140px; }
   div.sheet-licensecontainer.sheet-licensedsheet .sheet-container:not(.sheet-npc) div.sheet-page.sheet-core > div.sheet-header,
   div.sheet-licensecontainer.sheet-licensedsheet .sheet-container:not(.sheet-npc) div.sheet-page.sheet-options > div.sheet-header,
