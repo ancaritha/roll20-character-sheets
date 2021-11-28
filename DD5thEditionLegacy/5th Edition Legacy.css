@@ -2634,7 +2634,10 @@ By Miguel
   min-height: 36px; }
 
 .sheet-npc .sheet-attack_option {
-  display: none; }
+  display: none; 
+  font-size: 13px;
+  line-height: 15px;
+  }
 
 .sheet-npc .sheet-attack_options[value="on"] ~ .sheet-attack_option,
 .sheet-npc .sheet-attack_options[value="{{attack=1}}"] ~ .sheet-attack_option {
@@ -2719,9 +2722,9 @@ By Miguel
   content: "."; }
 
 .sheet-npc .sheet-action .sheet-display .sheet-description {
-  white-space: normal;
+  white-space: pre-line;
   color: #555555;
-  line-height: 18px; }
+  line-height: 13px; }
 
 .sheet-npc .sheet-action .sheet-display textarea,
 .sheet-legendaryactions {
