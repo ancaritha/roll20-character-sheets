@@ -37,7 +37,7 @@ input[type=radio].sheet-tab-button + span {
 
 .sheet-advantagetoggle {
   position: absolute;
-  top: 92px;
+  top: 140px;
   left: 490px;
   z-index: 1; }
 
@@ -828,8 +828,8 @@ button[type=roll] * {
     box-shadow: 3px 3px 5px #ccc;
     z-index: 10;
     padding: 5px 5px;
-    margin-top: -12px;
-    margin-left: 30px;
+    margin-top: 30px;
+    margin-left: 20px;
     width: 250px;
 	height: 30px;
     line-height: 14px;
